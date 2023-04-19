@@ -15,12 +15,12 @@ import AddTaskModal from '../components/AddTaskModal';
 import TaskList from '../components/TaskList';
 import EditTaskModal from '../components/EditTaskModal';
 import {Menu} from 'react-native-paper';
-
 import firestore from '@react-native-firebase/firestore';
 import useAuth from '../hooks/useAuth';
 
 interface IProps {
   theme: AppThemeType;
+  navigation?: any;
 }
 
 interface ITask {
@@ -309,7 +309,6 @@ const Home = ({theme, navigation}: IProps) => {
         task={task}
         onUpdate={onUpdate}
         onDelete={onDelete}
-        // onAdd={onAdd}
       />
     </View>
   );
